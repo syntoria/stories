@@ -21,6 +21,13 @@ RESET = (
     "img{max-width:100%}"
 )
 
+# Absolute paths so the icons resolve the same from /josh/ as from the root.
+ICONS = """<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">"""
+
 TEMPLATE = """<!doctype html>
 <html lang="en">
 <head>
@@ -28,6 +35,7 @@ TEMPLATE = """<!doctype html>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
 <title>{title}</title>
+{icons}
 <style>{reset}</style>
 </head>
 <body>
@@ -51,7 +59,7 @@ def main(src, dest):
     title = match.group(1).strip()
     body = (body[: match.start()] + body[match.end() :]).strip()
 
-    page = TEMPLATE.format(title=title, reset=RESET, body=body)
+    page = TEMPLATE.format(title=title, icons=ICONS, reset=RESET, body=body)
 
     os.makedirs(os.path.dirname(dest) or ".", exist_ok=True)
     open(dest, "w", encoding="utf-8").write(page)
