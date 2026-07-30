@@ -28,6 +28,17 @@ artifact does.
 is **no longer in sync**: the deployed page carries a 125% scale rule the
 artifact does not have. Treat `src/` as authoritative.
 
+## Icons
+
+The favicon set is generated from the brand's rising-sun mark, kept in
+`brand/logo-mark-white.png` (pulled from the Syntoria Design System). Rebuild
+it with:
+
+    python3 make_favicon.py
+
+Do not hand-edit the generated `favicon*`, `apple-touch-icon.png` or `icon-*`
+files. If the mark itself changes, replace the file in `brand/` and rerun.
+
 ## Caching
 
 GitHub Pages serves with a ten-minute cache. After a push, a browser that
