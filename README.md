@@ -12,10 +12,24 @@ password protection, and this repository is public. `noindex,nofollow` and
 `robots.txt` keep the pages out of search results — that is unlisted, not
 private. Never publish anything a stranger should not see.
 
-## Updating a page
+## Editing a page
 
-The Claude artifact is the source of truth; this repository holds the
-deployed copy. Edit the artifact first, then re-export it here so the two
-never drift.
+`src/` holds the source; the built page at `<name>/index.html` is generated and
+should not be hand-edited. Edit the source, rebuild, commit both:
 
-- `/josh/` ← artifact `a19ab16b-6bd5-4d82-9969-f1a948a0e1a6`
+    python3 build.py src/josh.html josh/index.html
+
+The sources are Claude artifact bodies — no doctype, no `<head>`, no `<body>`,
+because claude.ai adds that wrapper at publish time. `build.py` adds the same
+wrapper plus the `noindex` directive, so the deployed page renders as the
+artifact does.
+
+`/josh/` began as artifact `a19ab16b-6bd5-4d82-9969-f1a948a0e1a6`. That artifact
+is **no longer in sync**: the deployed page carries a 125% scale rule the
+artifact does not have. Treat `src/` as authoritative.
+
+## Caching
+
+GitHub Pages serves with a ten-minute cache. After a push, a browser that
+already has the page may keep showing the old one for a few minutes. Append
+`?v=2` to the URL to force a fresh copy when checking a change.
