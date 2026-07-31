@@ -34,10 +34,13 @@ Every coach page's CTA must link the participation form **with tracking
 parameters** — they fill the form's hidden `coach` and `case` fields so each
 submission arrives tagged with the engagement it belongs to:
 
-    https://tally.so/r/Bzq7QY?coach=Full%20Name&case=<page-slug>
+    https://tally.so/r/Bzq7QY?coach=Full%20Name&case=<story-id>
 
-A bare `https://tally.so/r/Bzq7QY` loses the tracking. Same rule applies when
-sharing the form link directly (email, LinkedIn) instead of the story page.
+`coach` is the coach's full name (URL-encode spaces and accents); `case` is the
+case's story ID from Notion, e.g. `SYN-2026-001` — per the service playbook
+(Step 2), which is authoritative. A bare `https://tally.so/r/Bzq7QY` loses the
+tracking. Same rule applies when sharing the form link directly (email,
+LinkedIn) instead of the story page.
 
 ## Icons
 
