@@ -28,6 +28,17 @@ artifact does.
 is **no longer in sync**: the deployed page carries a 125% scale rule the
 artifact does not have. Treat `src/` as authoritative.
 
+## The Tally CTA link
+
+Every coach page's CTA must link the participation form **with tracking
+parameters** — they fill the form's hidden `coach` and `case` fields so each
+submission arrives tagged with the engagement it belongs to:
+
+    https://tally.so/r/Bzq7QY?coach=Full%20Name&case=<page-slug>
+
+A bare `https://tally.so/r/Bzq7QY` loses the tracking. Same rule applies when
+sharing the form link directly (email, LinkedIn) instead of the story page.
+
 ## Icons
 
 The favicon set is generated from the brand's rising-sun mark, kept in
