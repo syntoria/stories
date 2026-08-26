@@ -59,7 +59,20 @@ def main(src, dest):
     title = match.group(1).strip()
     body = (body[: match.start()] + body[match.end() :]).strip()
 
-    page = TEMPLATE.format(title=title, icons=ICONS, reset=RESET, body=body)
+    # Same for any <meta> tags the source declares (description, Open Graph).
+    # claude.ai ignores them in an artifact body; here they control how the link
+    # looks when someone pastes it into an email, a proposal or LinkedIn.
+    metas = re.findall(r"<meta\s[^>]*>", body)
+    for tag in metas:
+        body = body.replace(tag, "", 1)
+    body = body.strip()
+
+    page = TEMPLATE.format(
+        title=title,
+        icons=("\n".join(metas) + "\n" + ICONS) if metas else ICONS,
+        reset=RESET,
+        body=body,
+    )
 
     os.makedirs(os.path.dirname(dest) or ".", exist_ok=True)
     open(dest, "w", encoding="utf-8").write(page)
@@ -67,6 +80,7 @@ def main(src, dest):
     links = [h for h in re.findall(r'href="([^"]+)"', body) if not h.startswith("data:")]
     print(f"{src} -> {dest}")
     print(f"  title: {title}")
+    print(f"  metas: {len(metas)}")
     print(f"  bytes: {len(page):,}")
     print(f"  links: {', '.join(links) or 'none'}")
 
