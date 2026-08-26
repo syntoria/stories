@@ -1,0 +1,1419 @@
+<title>Case study methodology</title>
+<meta name="description" content="The protocol under which The Syntoria Institute produces, verifies, and publishes coaching case studies — method version 1.1, Parts I and II complete, including the instruments themselves.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="The Syntoria Institute">
+<meta property="og:title" content="Case study methodology — The Syntoria Institute">
+<meta property="og:description" content="The protocol under which coaching case studies are produced, verified, and published — including the instruments themselves. Method version 1.1.">
+<meta name="twitter:card" content="summary">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+
+<style>
+/* ============================================================================
+   THE SYNTORIA INSTITUTE — Case study methodology, method version 1.1
+   Public web edition of the review PDF (Parts I and II, 18 pp, 12 Aug 2026).
+
+   COLOUR GRAMMAR — three roles, never mixed
+   · navy   = the frame. Masthead, part dividers, footer. The Institute speaking.
+   · teal   = the apparatus. Instruments, evidence tiers, allowed language,
+              anything that is a working part of the method.
+   · coral / clay = the guardrail. What is never claimed, what is never cut,
+              when a story is declined, the risks that are not claimed away.
+   · cream  = set apart. A verbatim instrument reproduced, not narrated.
+   · white  = the narration itself.
+
+   Tokens are the Syntoria Design System (colors_and_type.css) — do not retune
+   here; re-run /design-sync if the brand moves.
+   ============================================================================ */
+
+:root{
+  color-scheme: light dark;
+
+  /* paper */
+  --paper:#F4EFE6;
+  --sheet:#FFFFFF;
+  --sheet-2:#FBF7F1;
+  --rule-warm:#E6DFD2;
+  --rule:#E3E8EE;
+  --rule-strong:#CBD5E1;
+
+  /* ink — navy-biased, never neutral grey */
+  --ink:#0A2540;
+  --fg:#26374A;
+  --muted:#5C7086;
+  --faint:#8E9CAA;
+
+  /* the frame */
+  --navy:#0A2540;
+  --navy-2:#0F3354;
+  --navy-3:#07203A;
+  --on-navy:#FFFFFF;
+  --on-navy-soft:#A8BDCC;
+  --on-navy-faint:#70889C;
+  --on-navy-line:rgba(255,255,255,.16);
+  --band-edge:transparent;
+
+  /* the apparatus — teal */
+  --teal:#0E7C8C;
+  --teal-d:#0A5560;
+  --teal-l:#67C4CC;
+  --teal-bg:#E9F4F5;
+  --teal-br:#BCDFE3;
+
+  /* the guardrail — coral / clay */
+  --coral:#F47B52;
+  --clay:#9B4B2C;
+  --coral-bg:#FCEDE4;
+  --coral-br:#F1CCB8;
+
+  /* neutral ramp for tiers and phases */
+  --step-1:#7E8FA0;
+  --step-2:#4B7386;
+  --step-3:#0E7C8C;
+
+  /* ENCODING COLOURS — fixed in both themes.
+     These sit under white text and carry meaning in the tier ramp, the time
+     budget and the scale, so they must not lighten in dark mode. Each is
+     >=4.5:1 against #FFF. */
+  --enc-1:#5C6F84;
+  --enc-2:#4E6479;
+  --enc-3:#3C6072;
+  --enc-4:#1F5A6E;
+  --enc-teal:#0E7C8C;
+  --enc-clay:#A9522F;
+  --enc-wrap:#4A5D71;
+
+  --shadow:0 1px 2px rgba(10,37,64,.05), 0 12px 40px rgba(10,37,64,.07);
+  --shadow-sm:0 1px 2px rgba(10,37,64,.06);
+
+  --disp:'Poppins','Century Gothic',ui-sans-serif,system-ui,sans-serif;
+  --body:'Inter',ui-sans-serif,system-ui,-apple-system,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,'SF Mono',Menlo,monospace;
+
+  --measure:58ch;
+  --gutter:3.5rem;
+}
+
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#050F1B;
+  --sheet:#0C1E30;
+  --sheet-2:#102639;
+  --rule-warm:#22384C;
+  --rule:#1E344B;
+  --rule-strong:#2C4761;
+
+  --ink:#E8EFF5;
+  --fg:#C4D2DE;
+  --muted:#93A6B6;
+  --faint:#74889A;
+
+  --navy:#0E2A45;
+  --navy-2:#143654;
+  --navy-3:#0A2039;
+  --on-navy:#F3F8FC;
+  --on-navy-soft:#A0B6C7;
+  --on-navy-faint:#7089A0;
+  --on-navy-line:rgba(255,255,255,.14);
+  --band-edge:rgba(255,255,255,.11);
+
+  --teal:#3FB3C4;
+  --teal-d:#8FDCE5;
+  --teal-l:#2E8C9C;
+  --teal-bg:#0F313B;
+  --teal-br:#255E6B;
+
+  --coral:#F0906B;
+  --clay:#F2A886;
+  --coral-bg:#332016;
+  --coral-br:#5A3625;
+
+  --step-1:#8399AC;
+  --step-2:#4E93A8;
+  --step-3:#3FB3C4;
+
+  --shadow:0 1px 2px rgba(0,0,0,.3), 0 12px 40px rgba(0,0,0,.35);
+  --shadow-sm:0 1px 2px rgba(0,0,0,.3);
+}}
+
+:root[data-theme="dark"]{
+  --paper:#050F1B;
+  --sheet:#0C1E30;
+  --sheet-2:#102639;
+  --rule-warm:#22384C;
+  --rule:#1E344B;
+  --rule-strong:#2C4761;
+
+  --ink:#E8EFF5;
+  --fg:#C4D2DE;
+  --muted:#93A6B6;
+  --faint:#74889A;
+
+  --navy:#0E2A45;
+  --navy-2:#143654;
+  --navy-3:#0A2039;
+  --on-navy:#F3F8FC;
+  --on-navy-soft:#A0B6C7;
+  --on-navy-faint:#7089A0;
+  --on-navy-line:rgba(255,255,255,.14);
+  --band-edge:rgba(255,255,255,.11);
+
+  --teal:#3FB3C4;
+  --teal-d:#8FDCE5;
+  --teal-l:#2E8C9C;
+  --teal-bg:#0F313B;
+  --teal-br:#255E6B;
+
+  --coral:#F0906B;
+  --clay:#F2A886;
+  --coral-bg:#332016;
+  --coral-br:#5A3625;
+
+  --step-1:#8399AC;
+  --step-2:#4E93A8;
+  --step-3:#3FB3C4;
+
+  --shadow:0 1px 2px rgba(0,0,0,.3), 0 12px 40px rgba(0,0,0,.35);
+  --shadow-sm:0 1px 2px rgba(0,0,0,.3);
+}
+
+/* ---------------------------------------------------------------- base ---- */
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:5.5rem;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important;animation:none!important}
+}
+body{
+  background:var(--paper);
+  color:var(--fg);
+  font-family:var(--body);
+  font-size:1.0625rem;
+  line-height:1.72;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+img{max-width:100%;display:block}
+a{color:var(--teal-d);text-decoration:none;border-bottom:1px solid color-mix(in srgb,var(--teal) 40%,transparent);transition:border-color .15s ease,color .15s ease}
+a:hover{border-bottom-color:currentColor}
+:focus-visible{outline:2px solid var(--teal);outline-offset:3px;border-radius:3px}
+.tnum{font-variant-numeric:tabular-nums}
+
+/* -------------------------------------------------------- sticky chrome ---- */
+.progress{position:fixed;inset:0 auto auto 0;height:2px;width:0;z-index:60;
+  background:linear-gradient(90deg,var(--teal),var(--teal-l))}
+
+.bar{position:sticky;top:0;z-index:50;background:var(--navy);color:var(--on-navy);
+  border-bottom:1px solid var(--on-navy-line)}
+.bar__in{max-width:78rem;margin:0 auto;padding:.6rem clamp(1rem,4vw,2.5rem);
+  display:flex;align-items:center;gap:.85rem}
+.bar__mark{flex:none;width:24px;height:24px;opacity:.95}
+.bar__name{font-family:var(--disp);font-weight:500;font-size:.9375rem;letter-spacing:.005em;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar__ver{font-family:var(--mono);font-size:.75rem;color:var(--on-navy-soft);
+  letter-spacing:.02em;white-space:nowrap}
+.bar__ver::before{content:"";display:inline-block;width:1px;height:.85em;
+  background:var(--on-navy-line);margin-right:.7rem;vertical-align:-.05em}
+/* below this the version chip costs more room than the document's name */
+@media (max-width:480px){.bar__ver{display:none}}
+.bar__spacer{flex:1}
+.bar__toggle{font-family:var(--body);font-size:.8125rem;font-weight:600;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--on-navy);background:transparent;
+  border:1px solid var(--on-navy-line);border-radius:999px;padding:.4rem .9rem;
+  cursor:pointer;display:inline-flex;align-items:center;gap:.5rem;white-space:nowrap;
+  transition:background .15s ease,border-color .15s ease}
+.bar__toggle:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.34)}
+.bar__toggle svg{width:9px;height:9px;transition:transform .18s ease}
+.bar__toggle[aria-expanded="true"] svg{transform:rotate(180deg)}
+
+.jump{display:none;background:var(--navy-3);border-bottom:1px solid var(--on-navy-line);
+  position:sticky;top:2.9rem;z-index:49}
+.jump[data-open="true"]{display:block}
+.jump__in{max-width:78rem;margin:0 auto;padding:1.4rem clamp(1rem,4vw,2.5rem) 1.6rem;
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1.4rem 2.5rem}
+.jump .grp{font-family:var(--body);font-size:.6875rem;font-weight:700;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--on-navy-faint);margin-bottom:.7rem}
+.jump ol{list-style:none;display:flex;flex-direction:column;gap:.3rem}
+.jump li{padding-left:0}
+.jump li::before{content:none}
+.jump a{color:var(--on-navy-soft);border:0;font-size:.875rem;line-height:1.45;
+  display:flex;gap:.7rem}
+.jump a:hover{color:var(--on-navy)}
+.jump a b{font-family:var(--mono);font-weight:500;font-size:.75rem;color:var(--teal-l);
+  flex:none;width:1.6rem;padding-top:.12em}
+
+/* --------------------------------------------------------------- shell ---- */
+.wrap{max-width:64rem;margin:0 auto;padding:0 clamp(0rem,3vw,2.5rem)}
+.sheet{background:var(--sheet);box-shadow:var(--shadow);
+  border-left:1px solid var(--rule-warm);border-right:1px solid var(--rule-warm)}
+
+/* ------------------------------------------------------------ masthead ---- */
+.mast{background:linear-gradient(158deg,var(--navy-2) 0%,var(--navy) 46%,var(--navy-3) 100%);
+  color:var(--on-navy);padding:clamp(3rem,7vw,5.5rem) clamp(1.5rem,5vw,4.5rem) clamp(2.5rem,5vw,4rem);
+  position:relative;overflow:hidden}
+.mast::after{content:"";position:absolute;right:-14%;top:-32%;width:34rem;height:34rem;
+  border-radius:50%;background:radial-gradient(circle,rgba(14,124,140,.30),transparent 62%);
+  pointer-events:none}
+.mast__in{position:relative;max-width:52rem}
+.mast__brand{display:flex;align-items:center;gap:.85rem;margin-bottom:clamp(1.75rem,4vw,2.75rem)}
+.mast__brand svg{width:34px;height:34px;flex:none}
+.mast__brand span{font-family:var(--body);font-weight:600;font-size:.75rem;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--on-navy-soft)}
+.mast h1{font-family:var(--disp);font-weight:300;
+  font-size:clamp(2.5rem,6.4vw,4.25rem);line-height:1.03;letter-spacing:-.022em;
+  color:var(--on-navy);text-wrap:balance}
+.mast h1 em{font-style:normal;font-weight:500}
+.mast__rule{width:5.5rem;height:3px;border-radius:2px;margin:clamp(1.4rem,3vw,2rem) 0;
+  background:linear-gradient(90deg,var(--teal),var(--teal-l))}
+.mast__lede{font-size:clamp(1.0625rem,1.9vw,1.3125rem);line-height:1.62;
+  color:#D4E1EB;max-width:40ch;font-weight:300}
+.mast__meta{margin-top:clamp(2.25rem,5vw,3.25rem);padding-top:1.5rem;
+  border-top:1px solid var(--on-navy-line);
+  display:flex;flex-wrap:wrap;gap:.6rem 2.75rem}
+.mast__meta div{display:flex;flex-direction:column;gap:.3rem}
+.mast__meta dt{font-family:var(--body);font-size:.625rem;font-weight:700;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--on-navy-faint)}
+.mast__meta dd{font-family:var(--mono);font-size:.875rem;color:var(--on-navy);letter-spacing:-.005em}
+.mast__meta dd a{color:var(--teal-l);border-bottom-color:rgba(103,196,204,.4)}
+
+/* --------------------------------------------------------------- body ----- */
+.doc{padding:clamp(2.5rem,6vw,5rem) clamp(1.25rem,5vw,3.5rem) clamp(3rem,7vw,6rem)}
+.col{max-width:var(--measure);margin:0 auto}
+
+/* section — number hangs in the gutter at desktop width */
+.sec{margin-top:clamp(3rem,6vw,4.75rem);position:relative}
+.sec:first-child{margin-top:0}
+.sec__h{display:flex;align-items:baseline;gap:1rem;margin-bottom:1.25rem;
+  padding-bottom:.85rem;border-bottom:1px solid var(--rule)}
+.sec__n{font-family:var(--mono);font-weight:500;font-size:.9375rem;color:var(--teal);
+  flex:none;letter-spacing:0;padding-top:.15em}
+.sec__h h2{font-family:var(--disp);font-weight:500;
+  font-size:clamp(1.5rem,3vw,1.9375rem);line-height:1.2;letter-spacing:-.015em;
+  color:var(--ink);text-wrap:balance;flex:1}
+.sec__link{opacity:0;border:0;color:var(--faint);font-family:var(--mono);font-size:1rem;
+  flex:none;transition:opacity .15s ease,color .15s ease;line-height:1}
+.sec__h:hover .sec__link,.sec__link:focus-visible{opacity:1}
+.sec__link:hover{color:var(--teal)}
+
+@media (min-width:1100px){
+  .sec__h{margin-left:calc(-1 * var(--gutter));padding-left:var(--gutter);position:relative}
+  .sec__n{position:absolute;left:0;top:.15em;width:var(--gutter);text-align:left;padding-top:0}
+  .sec__h h2{margin-left:0}
+}
+
+h3{font-family:var(--disp);font-weight:600;font-size:1.125rem;line-height:1.35;
+  color:var(--ink);letter-spacing:-.005em;margin:2.25rem 0 .75rem}
+h3 .h3n{font-family:var(--mono);font-weight:500;color:var(--teal);margin-right:.55rem;font-size:.9375rem}
+p{margin:0 0 1.05rem;max-width:var(--measure)}
+p:last-child{margin-bottom:0}
+strong{font-weight:600;color:var(--ink)}
+em{font-style:italic}
+
+.lede{font-size:1.1875rem;line-height:1.66;color:var(--ink);font-weight:400;max-width:60ch}
+
+ul,ol{margin:0 0 1.05rem;padding-left:0;list-style:none;max-width:var(--measure);
+  display:flex;flex-direction:column;gap:.65rem}
+li{position:relative;padding-left:1.9rem}
+ul>li::before{content:"";position:absolute;left:.45rem;top:.72em;width:5px;height:5px;
+  border-radius:50%;background:var(--teal)}
+ol{counter-reset:ol}
+ol>li{counter-increment:ol}
+ol>li::before{content:counter(ol);position:absolute;left:0;top:.3em;
+  font-family:var(--mono);font-size:.8125rem;font-weight:500;color:var(--teal);
+  width:1.35rem;text-align:right}
+
+/* ------------------------------------------------------- status notice ---- */
+.notice{background:var(--sheet-2);border:1px solid var(--rule-warm);
+  border-left:3px solid var(--teal);border-radius:0 10px 10px 0;
+  padding:1.5rem 1.75rem;margin-bottom:clamp(2.5rem,5vw,3.5rem);max-width:var(--measure)}
+.notice__k{font-family:var(--body);font-size:.6875rem;font-weight:700;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--teal-d);margin-bottom:.85rem}
+.notice p{font-size:.9875rem;line-height:1.68;color:var(--fg)}
+.notice p:last-child{margin-bottom:0}
+
+/* ------------------------------------------------------------ contents ---- */
+.toc{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);
+  padding:2rem 0;margin-bottom:clamp(1rem,3vw,2rem);
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:2rem 3rem}
+.toc .grp{margin:0 0 1rem;font-family:var(--body);font-size:.6875rem;font-weight:700;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.toc ol{gap:.45rem;margin:0;list-style:none;counter-reset:none}
+.toc li{padding-left:2.1rem}
+.toc li::before{content:none}
+.toc a{color:var(--fg);border:0;display:block;font-size:.9375rem;line-height:1.4;position:relative}
+.toc a:hover{color:var(--teal-d)}
+.toc a b{font-family:var(--mono);font-weight:500;font-size:.78125rem;color:var(--teal);
+  position:absolute;left:-2.1rem;top:.1em;width:1.7rem}
+
+/* ---------------------------------------------------------- part divider -- */
+.part{margin:clamp(3.5rem,8vw,6rem) 0 clamp(2.5rem,5vw,3.5rem);
+  background:var(--navy);color:var(--on-navy);border:1px solid var(--band-edge);border-radius:14px;
+  padding:clamp(1.75rem,4vw,2.5rem) clamp(1.5rem,4vw,2.75rem);
+  display:flex;align-items:baseline;gap:1.5rem;flex-wrap:wrap}
+.part__n{font-family:var(--mono);font-size:.6875rem;font-weight:600;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--teal-l);flex:none}
+.part h2{font-family:var(--disp);font-weight:300;font-size:clamp(1.75rem,4vw,2.5rem);
+  line-height:1.1;letter-spacing:-.02em;color:var(--on-navy);flex:1;min-width:12rem}
+.part__note{flex:1 0 100%;max-width:none;font-size:.9375rem;line-height:1.6;color:var(--on-navy-soft);
+  border-top:1px solid var(--on-navy-line);padding:1.15rem clamp(0rem,20vw,15rem) 0 0;margin-top:.35rem}
+
+/* set-pieces break out past the reading measure once there is room for it */
+@media (min-width:1000px){
+  .tw,.ledger,.budget,.stages,.nevers,.order,.limits,.scale,.risks{
+    width:calc(100% + 7rem);margin-left:-3.5rem;margin-right:-3.5rem}
+}
+
+/* ------------------------------------------------------------- tables ----- */
+.tw{overflow-x:auto;margin:1.5rem 0 1.5rem;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.9375rem}
+thead th{font-family:var(--body);font-size:.625rem;font-weight:700;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--muted);text-align:left;
+  padding:0 1rem .65rem 0;border-bottom:1.5px solid var(--rule-strong);vertical-align:bottom}
+tbody td{padding:.9rem 1rem .9rem 0;border-bottom:1px solid var(--rule);
+  vertical-align:top;line-height:1.55;color:var(--fg)}
+tbody tr:last-child td{border-bottom:0}
+td:last-child,th:last-child{padding-right:0}
+
+/* evidence tiers */
+.tiers td:first-child{width:12rem}
+.chip{display:inline-flex;align-items:center;gap:.55rem;font-family:var(--mono);
+  font-size:.8125rem;font-weight:500;color:var(--ink);white-space:nowrap}
+.chip i{width:22px;height:22px;border-radius:6px;display:grid;place-items:center;
+  font-style:normal;font-size:.6875rem;font-weight:600;color:#fff;flex:none}
+.chip--1 i{background:var(--enc-1)}
+.chip--2 i{background:var(--enc-3)}
+.chip--3 i{background:var(--enc-teal)}
+.said{font-family:var(--mono);font-size:.84375rem;color:var(--teal-d);line-height:1.5;display:block}
+
+/* beats table */
+.beats td:first-child{width:2.5rem;font-family:var(--mono);font-size:.8125rem;color:var(--teal);
+  font-weight:500;padding-top:1.05rem}
+.beats td:nth-child(2){width:15rem;color:var(--ink);font-weight:500}
+
+/* blocks table */
+.blocks td:first-child{width:2.5rem;font-family:var(--mono);font-size:.8125rem;color:var(--teal);
+  font-weight:500;padding-top:1.05rem}
+.blocks td:nth-child(2){width:13rem;color:var(--ink);font-weight:500}
+.blocks td:nth-child(3){width:5.5rem;font-family:var(--mono);font-size:.8125rem;color:var(--muted);
+  white-space:nowrap;padding-top:1.05rem}
+.blocks tr[data-protected] td:nth-child(3){color:var(--clay);font-weight:600}
+
+/* version history */
+.vh td:first-child{width:5rem;font-family:var(--mono);font-size:.8125rem;color:var(--ink);font-weight:600}
+.vh td:nth-child(2){width:9rem;font-family:var(--mono);font-size:.8125rem;color:var(--muted);white-space:nowrap}
+.vh ul{gap:.55rem;margin:0}
+.vh li{padding-left:1.2rem;font-size:.9375rem;line-height:1.55}
+.vh ul>li::before{width:4px;height:4px;left:.15rem;background:var(--faint)}
+
+/* -------------------------------------------------------- instruments ----- */
+.instr{background:var(--sheet-2);border:1px solid var(--rule-warm);border-left:3px solid var(--teal);
+  border-radius:0 12px 12px 0;padding:1.5rem 1.75rem;margin:1.75rem 0}
+.instr__k{display:flex;align-items:center;gap:.6rem;font-family:var(--body);font-size:.625rem;
+  font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--teal-d);
+  margin-bottom:1rem}
+.instr__k::after{content:"";flex:1;height:1px;background:var(--rule-warm)}
+.instr p{margin-bottom:.9rem}
+.instr p:last-child{margin-bottom:0}
+
+/* verbatim script — the interviewer or coach actually speaking */
+.script{font-family:var(--body);font-size:1rem;line-height:1.72;color:var(--ink);
+  border-left:2px solid var(--teal-br);padding-left:1.15rem;margin:0 0 1rem}
+.script:last-child{margin-bottom:0}
+.script + .script{margin-top:-.15rem}
+
+/* the invitation email, set as an email */
+.email{background:var(--sheet);border:1px solid var(--rule-strong);border-radius:10px;
+  overflow:hidden;margin:1.75rem 0;box-shadow:var(--shadow-sm)}
+.email__hd{background:var(--sheet-2);border-bottom:1px solid var(--rule-warm);
+  padding:.85rem 1.5rem;display:flex;flex-wrap:wrap;gap:.35rem 1.5rem;align-items:baseline}
+.email__hd span{font-family:var(--body);font-size:.625rem;font-weight:700;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--muted)}
+.email__hd b{font-family:var(--mono);font-size:.875rem;font-weight:500;color:var(--ink)}
+.email__bd{padding:1.5rem;display:flex;flex-direction:column;gap:.9rem;
+  font-size:.9875rem;line-height:1.7;color:var(--fg)}
+.email__bd .url{font-family:var(--mono);font-size:.84375rem;color:var(--teal-d);
+  background:var(--teal-bg);border:1px dashed var(--teal-br);border-radius:6px;
+  padding:.5rem .8rem;align-self:flex-start;max-width:100%;overflow-wrap:anywhere}
+
+/* absence callout — what the instrument deliberately leaves out */
+.absent{background:var(--coral-bg);border:1px solid var(--coral-br);border-radius:12px;
+  padding:1.35rem 1.6rem;margin:1.75rem 0}
+.absent__k{display:flex;align-items:center;gap:.55rem;font-family:var(--body);font-size:.625rem;
+  font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--clay);margin-bottom:.7rem}
+.absent__k::before{content:"";width:7px;height:7px;border-radius:2px;background:var(--coral);flex:none}
+.absent p{font-size:.9375rem;line-height:1.65;color:var(--fg);margin:0}
+
+/* ------------------------------------------- the 60-minute interview bar --- */
+.budget{margin:2rem 0 1.75rem}
+.budget__k{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;
+  gap:.5rem 1rem;margin-bottom:.85rem}
+.budget__k b{font-family:var(--body);font-size:.625rem;font-weight:700;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--muted)}
+.budget__k span{font-family:var(--mono);font-size:.8125rem;color:var(--muted)}
+.budget__bar{display:flex;height:44px;border-radius:8px;overflow:hidden;
+  border:1px solid var(--rule-strong);background:var(--sheet-2)}
+.budget__seg{display:grid;place-items:center;min-width:0;position:relative;overflow:hidden;
+  font-family:var(--mono);font-size:.75rem;font-weight:500;color:#fff;
+  border-right:1px solid rgba(255,255,255,.22)}
+.budget__seg:last-child{border-right:0}
+.budget__seg span{max-width:100%;padding:0 .2rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.budget__seg i{font-style:normal}
+@media (max-width:760px){.budget__seg i{display:none}}
+.budget__seg[data-tone="a"]{background:var(--enc-1)}
+.budget__seg[data-tone="b"]{background:var(--enc-2)}
+.budget__seg[data-tone="c"]{background:var(--enc-3)}
+.budget__seg[data-tone="d"]{background:var(--enc-4)}
+.budget__seg[data-tone="e"]{background:var(--enc-teal)}
+.budget__seg[data-tone="neg"]{background:var(--enc-clay)}
+.budget__seg[data-tone="f"]{background:var(--enc-wrap)}
+.budget__seg[data-tone="slack"]{background:repeating-linear-gradient(135deg,
+  var(--sheet-2) 0 5px,var(--rule-warm) 5px 10px);color:var(--muted);border-right:0}
+.budget__legend{display:flex;flex-wrap:wrap;gap:.5rem 1.4rem;margin-top:.85rem}
+.budget__legend div{display:flex;align-items:center;gap:.5rem;font-size:.8125rem;color:var(--muted)}
+.budget__legend i{width:11px;height:11px;border-radius:3px;flex:none;font-style:normal}
+.budget__legend i[data-tone="neg"]{background:var(--enc-clay)}
+.budget__legend i[data-tone="e"]{background:var(--enc-teal)}
+.budget__legend i[data-tone="slack"]{background:repeating-linear-gradient(135deg,
+  var(--sheet-2) 0 3px,var(--rule-warm) 3px 6px);border:1px solid var(--rule-strong)}
+
+/* --------------------------------------------------------- dimensions ----- */
+.chips{display:flex;flex-direction:row;flex-wrap:wrap;gap:.5rem;margin:1.25rem 0 1.5rem;max-width:var(--measure)}
+.chips li{padding:0;font-family:var(--body);font-size:.875rem;color:var(--ink);
+  background:var(--teal-bg);border:1px solid var(--teal-br);border-radius:999px;
+  padding:.35rem .85rem;line-height:1.4}
+.chips li::before{content:none}
+
+/* the seven-point global transition scale */
+.scale{margin:1.5rem 0;overflow-x:auto}
+.scale__row{display:flex;min-width:34rem;border-radius:8px;overflow:hidden;
+  border:1px solid var(--rule-strong)}
+.scale__row div{flex:1;text-align:center;padding:.75rem .4rem;font-size:.78125rem;line-height:1.3;
+  color:var(--fg);background:var(--sheet-2);border-right:1px solid var(--rule)}
+.scale__row div:last-child{border-right:0}
+.scale__row div[data-mid]{background:var(--sheet);color:var(--muted);font-weight:600}
+.scale__row div[data-up="1"]{background:color-mix(in srgb,var(--teal-bg) 55%,var(--sheet))}
+.scale__row div[data-up="2"]{background:color-mix(in srgb,var(--teal-bg) 100%,var(--sheet))}
+.scale__row div[data-up="3"]{background:var(--enc-teal);color:#fff;font-weight:600}
+.scale__row div[data-dn]{background:color-mix(in srgb,var(--coral-bg) 70%,var(--sheet))}
+.scale__cap{font-family:var(--mono);font-size:.75rem;color:var(--muted);margin-top:.6rem;
+  display:flex;justify-content:space-between;min-width:34rem}
+
+/* ------------------------------------------------------------- consent ---- */
+.stages{display:grid;grid-template-columns:repeat(auto-fit,minmax(19rem,1fr));gap:1.25rem;
+  align-items:start;margin:1.75rem 0}
+.stage{background:var(--sheet-2);border:1px solid var(--rule-warm);border-radius:12px;
+  padding:1.4rem 1.6rem;display:flex;flex-direction:column;gap:.35rem}
+.stage__k{font-family:var(--mono);font-size:.75rem;font-weight:600;letter-spacing:.06em;
+  color:var(--teal-d);text-transform:uppercase}
+.stage h4{font-family:var(--disp);font-weight:600;font-size:1.0625rem;color:var(--ink);
+  line-height:1.3;margin-bottom:.6rem}
+.stage ul{margin:0;gap:.7rem}
+.stage li{font-size:.9375rem;line-height:1.6;padding-left:1.4rem}
+.stage ul>li::before{left:.3rem;top:.68em;width:4px;height:4px}
+.stage li b{color:var(--ink);font-weight:600}
+
+/* the fixed approval order */
+.order{counter-reset:step;display:flex;flex-direction:column;gap:0;margin:1.75rem 0;
+  border:1px solid var(--rule-strong);border-radius:12px;overflow:hidden}
+.order li{counter-increment:step;padding:1.15rem 1.5rem 1.15rem 4rem;position:relative;
+  border-bottom:1px solid var(--rule);background:var(--sheet);font-size:.9375rem;line-height:1.62}
+.order li:last-child{border-bottom:0}
+.order li::before{content:counter(step);position:absolute;left:1.5rem;top:1.15rem;
+  width:1.55rem;height:1.55rem;border-radius:50%;display:grid;place-items:center;
+  font-family:var(--mono);font-size:.75rem;font-weight:600;color:#fff;background:var(--enc-teal);
+  text-align:center}
+.order li[data-actor="coach"]{background:var(--sheet-2)}
+.order li[data-actor="coach"]::before{background:var(--enc-1)}
+.order__who{display:block;font-family:var(--body);font-size:.625rem;font-weight:700;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:.3rem}
+.order li[data-actor="client"] .order__who{color:var(--teal-d)}
+
+/* ------------------------------------------------------- claim ledger ----- */
+.ledger{overflow-x:auto;margin:1.75rem 0}
+.ledger table{min-width:38rem}
+.ledger thead th{padding-bottom:.75rem}
+.ledger thead th:first-child{color:var(--teal-d)}
+.ledger thead th:last-child{color:var(--clay)}
+.ledger tbody td{width:50%;padding:1rem 1.25rem;border-bottom:1px solid var(--rule);
+  font-size:.9375rem;line-height:1.55}
+.ledger tbody td:first-child{border-left:3px solid var(--teal);background:var(--teal-bg);
+  color:var(--ink);padding-left:1.1rem}
+.ledger tbody td:last-child{border-left:3px solid var(--coral);background:var(--coral-bg);
+  color:var(--fg);padding-left:1.1rem}
+.ledger tbody tr:last-child td{border-bottom:0}
+
+/* the limitations note — reproduced verbatim in every story */
+.limits{background:var(--navy);color:var(--on-navy);border:1px solid var(--band-edge);border-radius:14px;
+  padding:clamp(1.6rem,4vw,2.25rem);margin:2rem 0}
+.limits__k{font-family:var(--body);font-size:.625rem;font-weight:700;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--teal-l);margin-bottom:1rem;
+  display:flex;align-items:center;gap:.6rem}
+.limits__k::after{content:"";flex:1;height:1px;background:var(--on-navy-line)}
+.limits h4{font-family:var(--disp);font-weight:600;font-size:1.0625rem;color:var(--on-navy);
+  margin-bottom:.7rem}
+.limits p{color:#CBDAE6;font-size:.9875rem;line-height:1.72;margin:0;max-width:64ch}
+
+/* the three claims never made */
+.nevers{display:flex;flex-direction:column;gap:0;margin:1.5rem 0 1.75rem;
+  border:1px solid var(--coral-br);border-radius:12px;overflow:hidden}
+.never{background:var(--sheet);border-bottom:1px solid var(--coral-br);
+  border-left:3px solid var(--coral);padding:1.2rem 1.5rem}
+.never:last-child{border-bottom:0}
+.never h4{font-family:var(--disp);font-weight:600;font-size:1rem;color:var(--clay);
+  margin-bottom:.5rem}
+.never p{font-size:.90625rem;line-height:1.6;color:var(--fg);margin:0}
+
+/* residual risks */
+.risks{border:1px solid var(--rule-strong);border-radius:12px;overflow:hidden;margin:1.5rem 0}
+.risks div{padding:1.2rem 1.5rem;border-bottom:1px solid var(--rule);background:var(--sheet)}
+.risks div:last-child{border-bottom:0}
+.risks h4{font-family:var(--body);font-size:.625rem;font-weight:700;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--clay);margin-bottom:.5rem}
+.risks p{font-size:.9375rem;line-height:1.62;margin:0}
+
+/* --------------------------------------------------------- references ----- */
+.refs{display:flex;flex-direction:column;gap:1.15rem;margin:1.5rem 0;list-style:none}
+.refs li{padding-left:0;border-left:2px solid var(--rule-strong);padding:.1rem 0 .1rem 1.2rem}
+.refs li::before{content:none}
+.refs b{display:block;font-family:var(--disp);font-weight:600;font-size:.9375rem;
+  color:var(--ink);margin-bottom:.25rem}
+.refs span{display:block;font-size:.90625rem;line-height:1.6;color:var(--fg)}
+.refs i{display:block;font-style:italic;font-size:.875rem;line-height:1.55;
+  color:var(--muted);margin-top:.3rem}
+
+/* -------------------------------------------------------------- footer ---- */
+.foot{background:var(--navy-3);color:var(--on-navy);border-top:1px solid var(--band-edge);
+  padding:clamp(2.5rem,6vw,4rem) clamp(1.5rem,5vw,4.5rem)}
+.foot__in{max-width:52rem;display:flex;flex-direction:column;gap:1.5rem}
+.foot__brand{display:flex;align-items:center;gap:.8rem}
+.foot__brand svg{width:28px;height:28px;flex:none}
+.foot__brand span{font-family:var(--body);font-weight:600;font-size:.6875rem;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--on-navy-soft)}
+.foot p{color:var(--on-navy-soft);font-size:.9375rem;line-height:1.7;max-width:56ch;margin:0}
+.foot p a{color:var(--teal-l);border-bottom-color:rgba(103,196,204,.4)}
+.foot__meta{border-top:1px solid var(--on-navy-line);padding-top:1.4rem;
+  display:flex;flex-wrap:wrap;gap:.4rem 2rem;font-family:var(--mono);font-size:.78125rem;
+  color:var(--on-navy-faint)}
+
+.totop{position:fixed;right:1.25rem;bottom:1.25rem;z-index:40;
+  width:2.75rem;height:2.75rem;border-radius:50%;display:grid;place-items:center;
+  background:var(--navy);color:var(--on-navy);border:1px solid var(--on-navy-line);
+  cursor:pointer;opacity:0;pointer-events:none;transition:opacity .2s ease;
+  box-shadow:var(--shadow)}
+.totop[data-show="true"]{opacity:1;pointer-events:auto}
+.totop:hover{background:var(--navy-2)}
+.totop svg{width:14px;height:14px}
+
+.sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;
+  clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.skip{position:absolute;left:-999px;top:0;z-index:70;background:var(--navy);color:#fff;
+  padding:.7rem 1.1rem;border:0;border-radius:0 0 8px 0}
+.skip:focus{left:0}
+
+/* -------------------------------------------------------------- mobile ---- */
+/* Below 760px a four-column protocol table degrades into a wide scroll with
+   tall, half-empty rows. Each row becomes its own stacked record instead. */
+@media (max-width:760px){
+  /* the part caption's right inset exists to shorten a long line on a wide
+     band; on a narrow one it just strangles the column */
+  .part__note{padding-right:0}
+  .tw,.ledger{overflow-x:visible}
+  .tw table,.ledger table{min-width:0;width:100%;display:block}
+  .tw thead,.ledger thead{display:none}
+  .tw tbody,.tw tr,.tw td,
+  .ledger tbody,.ledger tr,.ledger td{display:block;width:auto}
+  .tw tr,.ledger tr{border-bottom:1px solid var(--rule-strong);padding:1.1rem 0}
+  .tw tr:last-child,.ledger tr:last-child{border-bottom:0}
+  .tw td{border:0;padding:.1rem 0}
+
+  .blocks td:first-child,.beats td:first-child{width:auto;padding:0 0 .2rem;
+    font-size:.6875rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+  .blocks td:first-child::before{content:"Block "}
+  .beats td:first-child::before{content:"Beat "}
+  .blocks td:nth-child(2),.beats td:nth-child(2){width:auto;
+    font-family:var(--disp);font-size:1.0625rem;line-height:1.3;padding-bottom:.3rem}
+  .blocks td:nth-child(3){width:auto;padding-bottom:.4rem}
+  .tiers td:first-child{width:auto;padding-bottom:.45rem}
+
+  .vh td:first-child,.vh td:nth-child(2){width:auto;display:inline-block;
+    margin-right:1rem;padding:0 0 .5rem}
+
+  /* the claim ledger keeps its pairing through the rails, stacked */
+  .ledger tr{padding:0;border-bottom:0}
+  .ledger tbody td{width:auto;padding:.85rem 1.1rem;margin-bottom:.4rem;border-radius:0 8px 8px 0}
+  .ledger tbody td:first-child::before{content:"Allowed";display:block;
+    font-size:.625rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--teal-d);margin-bottom:.35rem}
+  .ledger tbody td:last-child::before{content:"Forbidden";display:block;
+    font-size:.625rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--clay);margin-bottom:.35rem}
+  .ledger tbody td:last-child{margin-bottom:1.1rem}
+  .ledger tbody tr:last-child td:last-child{margin-bottom:0}
+}
+
+/* --------------------------------------------------------------- print ---- */
+@media print{
+  .bar,.jump,.progress,.totop,.skip{display:none!important}
+  body{background:#fff;font-size:10.5pt;line-height:1.5}
+  .wrap{max-width:none;padding:0}
+  .sheet{box-shadow:none;border:0}
+  .mast,.part,.limits,.foot{background:#fff!important;color:#000!important;
+    border:1px solid #999;border-radius:0}
+  .mast h1,.part h2,.limits h4,.limits__k,.part__n,.mast__brand span,
+  .mast__lede,.mast__meta dd,.limits p,.foot p,.foot__meta{color:#000!important}
+  .mast::after{display:none}
+  .sec{break-inside:avoid-page;page-break-inside:avoid}
+  .instr,.email,.never,.stage,.budget,.limits{break-inside:avoid;page-break-inside:avoid}
+  a{color:#000;border:0}
+}
+</style>
+
+<a class="skip" href="#doc">Skip to the document</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<!-- ============================================================ chrome === -->
+<header class="bar">
+  <div class="bar__in">
+    <svg class="bar__mark" viewBox="0 0 100 100" aria-hidden="true" fill="none">
+      <path d="M18.7 78 A42 42 0 1 1 81.3 78" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+      <path d="M28.6 77 A30 30 0 1 1 71.4 77" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+      <path d="M43.9 77 A19 19 0 1 1 56.1 77" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+      <circle cx="50" cy="74" r="19.5" fill="#fff"/>
+    </svg>
+    <span class="bar__name">Case study methodology</span>
+    <span class="bar__ver tnum">v1.1</span>
+    <span class="bar__spacer"></span>
+    <button class="bar__toggle" id="jumpBtn" type="button" aria-expanded="false" aria-controls="jump">
+      Contents
+      <svg viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </div>
+</header>
+
+<nav class="jump" id="jump" data-open="false" aria-label="Jump to a section">
+  <div class="jump__in">
+    <div>
+      <div class="grp">Part I — Methods statement</div>
+      <ol>
+        <li><a href="#s1"><b>1</b>Purpose and scope</a></li>
+        <li><a href="#s2"><b>2</b>Commissioning and conflict of interest</a></li>
+        <li><a href="#s3"><b>3</b>Case selection</a></li>
+        <li><a href="#s4"><b>4</b>Procedure</a></li>
+        <li><a href="#s5"><b>5</b>Measurement</a></li>
+        <li><a href="#s6"><b>6</b>Evidence classification</a></li>
+        <li><a href="#s7"><b>7</b>Claim discipline and known limitations</a></li>
+        <li><a href="#s8"><b>8</b>Publication criteria</a></li>
+        <li><a href="#s9"><b>9</b>Consent, data protection, and participant rights</a></li>
+        <li><a href="#s10"><b>10</b>Corrections and accountability</a></li>
+        <li><a href="#s11"><b>11</b>Methodological basis</a></li>
+      </ol>
+    </div>
+    <div>
+      <div class="grp">Part II — The full protocol</div>
+      <ol>
+        <li><a href="#s12"><b>12</b>The invitation — exact wording</a></li>
+        <li><a href="#s13"><b>13</b>The interview, block by block</a></li>
+        <li><a href="#s14"><b>14</b>The retrospective ratings</a></li>
+        <li><a href="#s15"><b>15</b>Consent — the two stages in full</a></li>
+        <li><a href="#s16"><b>16</b>Claim language — allowed and forbidden</a></li>
+        <li><a href="#s17"><b>17</b>When a story is declined</a></li>
+      </ol>
+      <div class="grp" style="margin-top:1.4rem">Appendices</div>
+      <ol>
+        <li><a href="#appendix-a"><b>A</b>References</a></li>
+        <li><a href="#appendix-b"><b>B</b>Version history</a></li>
+      </ol>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+<article class="sheet" id="doc">
+
+<!-- ========================================================== masthead === -->
+<div class="mast">
+  <div class="mast__in">
+    <div class="mast__brand">
+      <svg viewBox="0 0 100 100" aria-hidden="true" fill="none">
+        <path d="M18.7 78 A42 42 0 1 1 81.3 78" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+        <path d="M28.6 77 A30 30 0 1 1 71.4 77" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+        <path d="M43.9 77 A19 19 0 1 1 56.1 77" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+        <circle cx="50" cy="74" r="19.5" fill="#fff"/>
+      </svg>
+      <span>The Syntoria Institute</span>
+    </div>
+    <h1>Case study<br><em>methodology</em></h1>
+    <div class="mast__rule"></div>
+    <p class="mast__lede">The protocol under which coaching case studies are produced, verified, and published — including the instruments themselves.</p>
+    <dl class="mast__meta">
+      <div><dt>Method version</dt><dd class="tnum">1.1</dd></div>
+      <div><dt>In force since</dt><dd class="tnum">12 August 2026</dd></div>
+      <div><dt>Scope</dt><dd>Parts I and II, complete</dd></div>
+      <div><dt>Prepared by</dt><dd>Sébastien Tomàs<br><a href="mailto:sebastien@syntoria.co">sebastien@syntoria.co</a></dd></div>
+    </dl>
+  </div>
+</div>
+
+<div class="doc">
+<div class="col">
+
+<!-- ===================================================== status notice === -->
+<div class="notice" id="status">
+  <div class="notice__k">Status of this document</div>
+  <p>This is method version 1.1, complete and in force. The protocol has been fully specified and is currently being run end to end for the first time; the first case (an engagement with a corporate sponsor) is in progress at the date of this document. Nothing in the method is provisional, but no case has yet completed the full cycle from invitation to publication.</p>
+  <p>Where the first case has already forced a change, that change is in this version and recorded in <a href="#appendix-b">Appendix B</a>. Where it forces further changes, they will appear as version 1.2 and be recorded the same way.</p>
+  <p>Part I is the statement intended for publication. Part II sets out the instruments — the recruitment wording, the interview structure, the rating script, the consent forms, the claim rules — so that the method can be inspected rather than taken on trust.</p>
+</div>
+
+<!-- ========================================================== contents === -->
+<nav class="toc" id="contents" aria-label="Contents">
+  <div>
+    <div class="grp">Part I — Methods statement</div>
+    <ol>
+      <li><a href="#s1"><b>1</b>Purpose and scope</a></li>
+      <li><a href="#s2"><b>2</b>Commissioning and conflict of interest</a></li>
+      <li><a href="#s3"><b>3</b>Case selection</a></li>
+      <li><a href="#s4"><b>4</b>Procedure</a></li>
+      <li><a href="#s5"><b>5</b>Measurement</a></li>
+      <li><a href="#s6"><b>6</b>Evidence classification</a></li>
+      <li><a href="#s7"><b>7</b>Claim discipline and known limitations</a></li>
+      <li><a href="#s8"><b>8</b>Publication criteria</a></li>
+      <li><a href="#s9"><b>9</b>Consent, data protection, and participant rights</a></li>
+      <li><a href="#s10"><b>10</b>Corrections and accountability</a></li>
+      <li><a href="#s11"><b>11</b>Methodological basis</a></li>
+    </ol>
+  </div>
+  <div>
+    <div class="grp">Part II — The full protocol</div>
+    <ol>
+      <li><a href="#s12"><b>12</b>The invitation — exact wording</a></li>
+      <li><a href="#s13"><b>13</b>The interview, block by block</a></li>
+      <li><a href="#s14"><b>14</b>The retrospective ratings</a></li>
+      <li><a href="#s15"><b>15</b>Consent — the two stages in full</a></li>
+      <li><a href="#s16"><b>16</b>Claim language — allowed and forbidden</a></li>
+      <li><a href="#s17"><b>17</b>When a story is declined</a></li>
+    </ol>
+    <div class="grp" style="margin-top:1.5rem">Appendices</div>
+    <ol>
+      <li><a href="#appendix-a"><b>A</b>References</a></li>
+      <li><a href="#appendix-b"><b>B</b>Version history</a></li>
+    </ol>
+  </div>
+</nav>
+
+</div><!-- /col -->
+
+<!-- ============================================================ PART I === -->
+<div class="part" id="part-1">
+  <div class="part__n">Part I</div>
+  <h2>Methods statement</h2>
+  <p class="part__note">The Syntoria Institute · Method version 1.1 · 12 August 2026</p>
+</div>
+
+<div class="col">
+
+<section class="sec" id="s1">
+  <div class="sec__h"><span class="sec__n">1</span><h2>Purpose and scope</h2><a class="sec__link" href="#s1" aria-label="Link to section 1">#</a></div>
+  <p>This document describes the methodology under which The Syntoria Institute produces, verifies, and publishes coaching case studies. Every published case study is produced under this protocol, without exception. The protocol is published to allow external scrutiny: readers, participants, and reviewers can assess any published story against the method stated here. Changes to the method are versioned and dated.</p>
+</section>
+
+<section class="sec" id="s2">
+  <div class="sec__h"><span class="sec__n">2</span><h2>Commissioning and conflict of interest</h2><a class="sec__link" href="#s2" aria-label="Link to section 2">#</a></div>
+  <p>Case studies are commissioned by the coach whose engagement is documented. The Syntoria Institute is therefore not a neutral research body and does not present itself as one; it is an independent producer operating under a fixed, published protocol.</p>
+  <p>Independence is protected structurally rather than asserted:</p>
+  <ol>
+    <li>The engagement fee is fixed and identical regardless of the content of the client's account.</li>
+    <li>The commissioning coach may flag factual errors and confidentiality issues, but cannot alter the meaning of the account.</li>
+    <li>A story that does not meet the publication criteria (<a href="#s8">section 8</a>) is declined, not revised toward publication.</li>
+    <li>Final approval of every published sentence rests with the client — not with the coach, and not with the Institute.</li>
+  </ol>
+  <p>No compensation, discount, or other item of value is ever conditioned on a favorable account (per FTC 16 CFR Parts 255 and 465).</p>
+</section>
+
+<section class="sec" id="s3">
+  <div class="sec__h"><span class="sec__n">3</span><h2>Case selection</h2><a class="sec__link" href="#s3" aria-label="Link to section 3">#</a></div>
+  <p>Each case is a deliberately selected success case: the coach nominates an engagement, typically among their strongest. This selection is disclosed in every published story. Following the Success Case Method (Brinkerhoff, 2003), the purpose of a selected success case is to document what an intervention can achieve at its best under verifiable conditions — not what the average client experiences. No inference about typical outcomes is made or implied.</p>
+  <p>Eligibility requires that the client agrees to be interviewed independently and that the engagement is recent enough for reliable recall. Engagements may be completed or ongoing; where an engagement is ongoing, a named and dated anchor point is fixed in advance and used as the reference for all retrospective ratings (<a href="#s5">section 5</a>). Deviations are recorded in the case file.</p>
+</section>
+
+<section class="sec" id="s4">
+  <div class="sec__h"><span class="sec__n">4</span><h2>Procedure</h2><a class="sec__link" href="#s4" aria-label="Link to section 4">#</a></div>
+
+  <h3 id="s4-1"><span class="h3n">4.1</span>Impact model</h3>
+  <p>Before any client contact, the engagement's goals as agreed at the time, the expected chain of change, and the engagement facts (dates, session count, format) are recorded with the coach. This is done through a standardized written pre-interview form followed by a working session, so that the record is the coach's own considered account rather than a live improvisation. The interview tests this model; the model is not shown to the client beforehand.</p>
+  <p>The coach is also asked to predict what the client will say changed. These predictions are quarantined: they are never placed in the interviewer's materials and are compared with the client's answers only after the interview, in analysis. An interviewer who knows the expected answer can steer toward it without intending to.</p>
+
+  <h3 id="s4-2"><span class="h3n">4.2</span>Invitation</h3>
+  <p>Clients are invited with a standardized email, sent by their own coach. Its six elements and their order are fixed; the version actually sent in each case is archived verbatim in the case file, and any deviation is recorded there. The invitation is the first time the case study is raised with the client: coaches are asked not to raise it informally beforehand, and not to discuss the engagement's substance with the client between the invitation and the interview. Approach wording is treated as part of the method, since how a participant is approached shapes what they report. The complete wording, and the function of each element within it, is set out in <a href="#s12">section 12</a>.</p>
+
+  <h3 id="s4-3"><span class="h3n">4.3</span>Interview</h3>
+  <p>A single recorded semi-structured interview of approximately 60 minutes, conducted with the client alone; the coach is not present. A participant's total time commitment across the whole case, including review of the draft, is approximately 90 minutes, and the invitation states this figure. The interview sequence is fixed to limit recall and demand biases:</p>
+  <ol>
+    <li>Consent confirmation and accuracy framing (accuracy is explicitly requested over positivity).</li>
+    <li>Timeline reconstruction — facts and dates only, prior to any evaluation.</li>
+    <li>Open elicitation — the client states the most significant change in their own words, before any prompting (Most Significant Change technique; Davies &amp; Dart, 2005).</li>
+    <li>Narrative account — context, stakes, decision, the work, reported changes.</li>
+    <li>Claim probes — every headline claim is probed for a specific example and for observations reported by third parties (board, team, family).</li>
+    <li>Structured measurement block (<a href="#s5">section 5</a>).</li>
+    <li>Negative elicitation — three fixed questions, never omitted: what did not change; what the coach should have done differently; what might have improved without the coaching. The answers are published.</li>
+  </ol>
+  <p>The full block-by-block structure, with time budgets and verbatim questions, is set out in <a href="#s13">section 13</a>.</p>
+
+  <h3 id="s4-4"><span class="h3n">4.4</span>Corroboration</h3>
+  <p>With the client's explicit consent, one named third party may be asked a brief standardized question to confirm a key reported change. Disconfirming replies are retained and reported; they downgrade the claim's evidence tier.</p>
+</section>
+
+<section class="sec" id="s5">
+  <div class="sec__h"><span class="sec__n">5</span><h2>Measurement</h2><a class="sec__link" href="#s5" aria-label="Link to section 5">#</a></div>
+  <p>Structured measurement uses the retrospective pre-post ("then-test") design (Howard et al., 1979): for 5–8 dimensions tied to the engagement's goals, the client rates their current standing, then their standing at the reference point, as judged from their present perspective. For a completed engagement the reference point is the period immediately before the coaching began; for an ongoing engagement it is the named, dated anchor fixed under <a href="#s3">section 3</a>, which is stated to the client rather than left to inference.</p>
+  <p>The block also records goal attainment against the goals stated in the impact model, three working-relationship items, and a single global transition rating.</p>
+  <p>All ratings are retrospective self-ratings. They are reported as such in every story, are never presented as measured outcomes, and never appear in a story's title.</p>
+</section>
+
+<section class="sec" id="s6">
+  <div class="sec__h"><span class="sec__n">6</span><h2>Evidence classification</h2><a class="sec__link" href="#s6" aria-label="Link to section 6">#</a></div>
+  <p>Every outcome claim in every published story is classified at one of three tiers:</p>
+  <div class="tw">
+    <table class="tiers">
+      <thead><tr><th scope="col">Tier</th><th scope="col">Definition</th><th scope="col">Reporting language</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="chip chip--1"><i>1</i>Client account</span></td>
+          <td>The client's own report</td>
+          <td><span class="said">"The client reports…", "attributes…"</span></td>
+        </tr>
+        <tr>
+          <td><span class="chip chip--2"><i>2</i>Reported observation</span></td>
+          <td>Observations by others, as reported by the client</td>
+          <td><span class="said">"The client says her board commented…"</span></td>
+        </tr>
+        <tr>
+          <td><span class="chip chip--3"><i>3</i>Corroborated</span></td>
+          <td>Confirmed by a document or by a second person</td>
+          <td><span class="said">"Confirmed by…"</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Quantitative claims that cannot be corroborated are either attributed to the client as their own estimate or omitted. The designation "verified" means precisely: a real person and a real engagement, interviewed independently under this protocol, verbatim transcript on file, every word approved by the client in writing, and every claim labeled at its actual tier. It does not mean the coaching has been proven to cause the reported outcomes.</p>
+</section>
+
+<section class="sec" id="s7">
+  <div class="sec__h"><span class="sec__n">7</span><h2>Claim discipline and known limitations</h2><a class="sec__link" href="#s7" aria-label="Link to section 7">#</a></div>
+  <p>The following claims are never made:</p>
+  <div class="nevers">
+    <div class="never">
+      <h4>Causation</h4>
+      <p>A retrospective single-case design cannot establish causal effect. Published stories use contribution language only (Mayne, 2008; 2012): the strongest permissible claim is that the evidence is consistent with the coaching contributing to the reported change, alongside other factors. Every story includes a paragraph naming those other factors, drawn from the client's own answers.</p>
+    </div>
+    <div class="never">
+      <h4>Typicality</h4>
+      <p>A selected success case supports no claim about average or expected outcomes.</p>
+    </div>
+    <div class="never">
+      <h4>Return on investment</h4>
+      <p>ROI multiples in the coaching industry rest on self-estimated figures that do not withstand methodological scrutiny (Grant, 2012; De Meuse et al., 2009). No ROI figures are published.</p>
+    </div>
+  </div>
+  <p>Two residual risks are acknowledged rather than claimed away.</p>
+  <div class="risks">
+    <div>
+      <h4>Residual risk 1 — the interviewer is not blind</h4>
+      <p>The impact model is built with the coach and known to the interviewer before the interview. The protocol contains this through fixed sequencing (open elicitation before any prompting), verbatim scripts, quarantined predictions, and published negative answers; it does not eliminate it.</p>
+    </div>
+    <div>
+      <h4>Residual risk 2 — corroborators are client-nominated</h4>
+      <p>Where a third party corroborates a claim, that person is nominated by the client. Corroboration is therefore a bounded check by someone positioned to observe the change, not independent verification by a disinterested party, and disconfirming replies are retained precisely because the check would otherwise carry little weight.</p>
+    </div>
+  </div>
+  <p>For context: meta-analytic evidence finds moderate positive effects of workplace coaching in rigorous trials (Theeboom et al., 2014; de Haan &amp; Nilsson, 2023), and self-reported change tends to exceed observer-rated change. The Institute's stories are self-reports, systematically taken and labeled accordingly; each story carries an identical limitations note stating this.</p>
+</section>
+
+<section class="sec" id="s8">
+  <div class="sec__h"><span class="sec__n">8</span><h2>Publication criteria</h2><a class="sec__link" href="#s8" aria-label="Link to section 8">#</a></div>
+  <p>A story is declined — not reshaped — when any of the following holds: the client will not be interviewed independently; headline outcomes cannot be corroborated and the client will not have them published as their own attributed account; the coach requires edits that change meaning; anonymity cannot genuinely protect the client after generalizing identifying details; the account remains internally inconsistent after follow-up; the client withdraws the negative-elicitation answers or the other-factors paragraph at review; or anything of value proves to be conditioned on a favorable account. The criteria are stated in operational form in <a href="#s17">section 17</a>.</p>
+</section>
+
+<section class="sec" id="s9">
+  <div class="sec__h"><span class="sec__n">9</span><h2>Consent, data protection, and participant rights</h2><a class="sec__link" href="#s9" aria-label="Link to section 9">#</a></div>
+  <p>Consent is taken in two stages: before the interview (participation, recording, transcription, drafting), and on the final text (publication, final visibility level, media rights). Nothing is published without the second signature. Both forms are reproduced in full in <a href="#s15">section 15</a>.</p>
+  <p>Participants may decline any question, withdraw before publication without explanation, and withdraw consent after publication, in which case the story is removed from the Institute's properties and the coach's. Participants choose among three visibility levels — full name, role and sector only, or fully anonymous — the latter two subject to an identifiability check conducted with the participant.</p>
+  <p>The recording is accessed only by the Institute and deleted once the final story is delivered; media excerpts approved at the second consent stage are retained. The verbatim transcript is retained as the story's audit trail and anonymized at the participant's request. Deleting the recording is a deliberate trade-off: it removes the possibility of re-auditing the transcript against the original audio, and accepts that cost in favor of participant privacy. The retained transcript is verbatim, and the client's written approval of the final text serves as the member check on its use. Transcription processing is disclosed in the consent form. Data handling follows GDPR Articles 6, 7, and 17.</p>
+</section>
+
+<section class="sec" id="s10">
+  <div class="sec__h"><span class="sec__n">10</span><h2>Corrections and accountability</h2><a class="sec__link" href="#s10" aria-label="Link to section 10">#</a></div>
+  <p>Disputes concerning any published story may be addressed to <a href="mailto:sebastien@syntoria.co">sebastien@syntoria.co</a>. Every challenge receives a response; corrections are made visibly, with a dated note on the story. Each published story carries a methods box stating the interview date, the evidence-tier legend, the client's written approval, the disclosed selection, the fixed-fee condition, and a link to this methodology.</p>
+</section>
+
+<section class="sec" id="s11">
+  <div class="sec__h"><span class="sec__n">11</span><h2>Methodological basis</h2><a class="sec__link" href="#s11" aria-label="Link to section 11">#</a></div>
+  <p>The protocol integrates: the Success Case Method (Brinkerhoff, 2003; 2005) for disclosed best-case selection and corroboration standards; contribution analysis (Mayne, 2008; 2012) for permissible causal language; qualitative trustworthiness criteria (Lincoln &amp; Guba, 1985; Yin, 2018) for member checking, audit trail, and rival explanations; retrospective pre-post measurement (Howard et al., 1979) for structured ratings; and FTC endorsement regulation and the ICC/ESOMAR code as the compliance floor for commissioned testimonials.</p>
+  <p>This methodology is currently undergoing external methodological review. Full references are given in <a href="#appendix-a">Appendix A</a>.</p>
+</section>
+
+</div><!-- /col -->
+
+<!-- =========================================================== PART II === -->
+<div class="part" id="part-2">
+  <div class="part__n">Part II</div>
+  <h2>The full protocol</h2>
+  <p class="part__note">Part I states what we do. This part shows the instruments themselves — the exact wording, the interview structure, the claim rules — so that a reader can check that the method is fixed rather than improvised. Scripts are reproduced verbatim; where they appear in quotation marks, the first person is the interviewer or the coach speaking as they actually speak.</p>
+</div>
+
+<div class="col">
+
+<section class="sec" id="s12">
+  <div class="sec__h"><span class="sec__n">12</span><h2>The invitation — exact wording</h2><a class="sec__link" href="#s12" aria-label="Link to section 12">#</a></div>
+  <p>This email is the first time the case study is put to the client. Coaches are asked not to raise it informally beforehand, and not to discuss the engagement's substance with the client between the invitation and the interview; where either has happened, it is recorded in the case file as a deviation. In the first case, the coach had raised the study with the client personally before this rule was fixed; that case's file records it, along with the version of the email actually sent.</p>
+  <p>The wording below is the current standard. Its six beats and their order are fixed; the version sent in each case is archived verbatim in the case file, and material changes to the standard wording are versioned in this method. It is sent by the coach, as plain text, with no attachment.</p>
+  <p>We publish it because how a participant is approached shapes what they say — and because it establishes, before the client has said anything, that the coach steps out of the process and that nothing reaches them until the client has approved it.</p>
+
+  <div class="email">
+    <div class="email__hd">
+      <span>Subject</span><b>Coaching Case Study</b>
+    </div>
+    <div class="email__bd">
+      <p>Hi [client first name],</p>
+      <p>I have a favor to ask.</p>
+      <p>I'm having an independent case study produced about my coaching work, and ours is the engagement I'd most like it to be about.</p>
+      <p>It's run by Sébastien Tomàs of The Syntoria Institute. Everything is on this page: what it involves, how much of your time it takes (about an hour and a half in total), and the short form to pick a time that suits you:</p>
+      <p class="url">[client-facing page URL — one per case]</p>
+      <p>One thing worth knowing: Sébastien interviews us separately, and nothing reaches me until you've approved it. So I'm stepping out from here. The page has his contact for anything you need.</p>
+      <p>And if you look at it and it isn't for you, no hard feelings at all.</p>
+      <p>Thanks, [client first name]. This means a lot to me.</p>
+      <p>Warmly,<br>[coach first name]</p>
+    </div>
+  </div>
+
+  <h3>What each beat is doing</h3>
+  <div class="tw">
+    <table class="beats">
+      <thead><tr><th scope="col">Beat</th><th scope="col">Element</th><th scope="col">Methodological function</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>The ask, carried by the relationship</td><td>The warrant is the coach's existing relationship, never the Institute's credibility. The Institute does not recruit participants; the coach asks, once, in their own name.</td></tr>
+        <tr><td>2</td><td>Who runs it, one line</td><td>Enough to place the Institute, deliberately not enough to become a pitch. A persuasive frame here would contaminate everything that follows.</td></tr>
+        <tr><td>3</td><td>The page carries everything, time cost stated up front</td><td>Full disclosure is moved to a page the participant reads alone, at their own pace, with no reply owed to anyone.</td></tr>
+        <tr><td>4</td><td>Independence stated plainly; the coach visibly steps out</td><td>"Nothing reaches me until you've approved it" states the structural independence in the participant's own language rather than in methodological terms.</td></tr>
+        <tr><td>5</td><td>The easy no</td><td>An explicit, cost-free exit protects the candor of everything said later. A participant who could not refuse cannot be relied on to disagree.</td></tr>
+        <tr><td>6</td><td>The personal thank-you</td><td>The ask remains personal. The relationship carries the request; the Institute never does.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="absent">
+    <div class="absent__k">What is deliberately absent</div>
+    <p>No methodology explanation (it is on the page) · no visibility levels or consent detail (page and form checkboxes) · no attachment · no second link · no request to reply. The client's only action is page → form → booking. Stage-A consent is completed on the form, before any interview slot exists; the form leads to the booking page and never the reverse.</p>
+  </div>
+
+  <h3>What the page states</h3>
+  <p>The client-facing page linked from the email carries, in fixed sections: who The Syntoria Institute is and who conducts the interview; what the case study is and how the coach will use it; the client's control — approval of every word, the three visibility levels, the right to withdraw; the total time commitment; how the interview is recorded and what happens to the recording and transcript; and the Institute's direct contact. The page ends at the stage-A consent form, which leads to the booking page — never the reverse. The page is built from a fixed template, personalized only in named fields; template copy is available on request.</p>
+</section>
+
+<section class="sec" id="s13">
+  <div class="sec__h"><span class="sec__n">13</span><h2>The interview, block by block</h2><a class="sec__link" href="#s13" aria-label="Link to section 13">#</a></div>
+  <p>Order matters. Facts before evaluation, to limit recall bias. The open question before any prompting, to prevent leading. Ratings only after the narrative, so that numbers describe the account rather than replace it.</p>
+  <p>The budgets below sum to approximately 58 minutes within a 60-minute interview; the slack is deliberate. Where a conversation runs long, the optional corroboration request in block 8 is the first item dropped and the measurement block absorbs the trim. Negative elicitation is never cut.</p>
+
+  <figure class="budget">
+    <div class="budget__k">
+      <b>The 60 minutes, as budgeted</b>
+      <span class="tnum">58 min allocated · 2 min deliberate slack</span>
+    </div>
+    <div class="budget__bar" role="img" aria-label="Time budget across the interview: consent recap 2 minutes, timeline reconstruction 7, open elicitation 4, the narrative 22 with claim probes woven in, structured measurement 10, negative elicitation 7 and never cut, optional corroboration 2, wrap 4, plus 2 minutes of deliberate slack.">
+      <div class="budget__seg" data-tone="a" style="flex:2"><span>2</span></div>
+      <div class="budget__seg" data-tone="b" style="flex:7"><span>7</span></div>
+      <div class="budget__seg" data-tone="c" style="flex:4"><span>4</span></div>
+      <div class="budget__seg" data-tone="d" style="flex:22"><span>22<i> · the narrative</i></span></div>
+      <div class="budget__seg" data-tone="e" style="flex:10"><span>10<i> · ratings</i></span></div>
+      <div class="budget__seg" data-tone="neg" style="flex:7"><span>7<i> · negatives</i></span></div>
+      <div class="budget__seg" data-tone="a" style="flex:2"><span>2</span></div>
+      <div class="budget__seg" data-tone="f" style="flex:4"><span>4</span></div>
+      <div class="budget__seg" data-tone="slack" style="flex:2"><span></span></div>
+    </div>
+    <div class="budget__legend">
+      <div><i data-tone="neg"></i>Negative elicitation — never cut</div>
+      <div><i data-tone="e"></i>Absorbs the trim when a conversation runs long</div>
+      <div><i data-tone="slack"></i>Deliberate slack</div>
+    </div>
+  </figure>
+
+  <div class="tw">
+    <table class="blocks">
+      <thead><tr><th scope="col">Block</th><th scope="col">Stage</th><th scope="col">Time</th><th scope="col">What happens</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>Consent recap + accuracy frame</td><td>2 min</td><td>Consent reconfirmed on the recording, then the accuracy framing line below.</td></tr>
+        <tr><td>2</td><td>Timeline reconstruction</td><td>7 min</td><td>Facts and dates only — role, context, start, turning points. No evaluation yet.</td></tr>
+        <tr><td>3</td><td>Open elicitation</td><td>4 min</td><td>One question, before any prompting. Their words only, then a single "why that one?"</td></tr>
+        <tr><td>4</td><td>The narrative</td><td>22 min</td><td>Context → what was at stake → the decision, including the hesitation → the work → what changed.</td></tr>
+        <tr><td>5</td><td>Claim probes</td><td>woven in</td><td>Per headline claim, two mandatory probes: a specific recent example, and what others actually noticed.</td></tr>
+        <tr><td>6</td><td>Structured measurement</td><td>10 min</td><td>Then-test ratings, goal attainment against the impact model, three working-relationship items, one global change rating.</td></tr>
+        <tr data-protected><td>7</td><td>Negative elicitation</td><td>7 min</td><td>Three questions, never skipped, answers published.</td></tr>
+        <tr><td>8</td><td>Optional corroboration</td><td>2 min</td><td>If a strong claim surfaced: permission to send one named third party a two-line confirmation question.</td></tr>
+        <tr><td>9</td><td>Wrap</td><td>4 min</td><td>Anything off the record, provisional visibility preference, next steps.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="instr">
+    <div class="instr__k">Block 1 — the accuracy frame, verbatim</div>
+    <p class="script">"Before we start: you've signed the consent form — I just want to confirm on the recording that you're okay with this conversation being recorded and used to produce a written story that [coach] will use publicly, and that you'll approve every word before anyone sees it. … One more thing, and it's the most important thing I'll say: the value of this whole exercise depends on accuracy, not positivity. If something didn't work, was slow, or is overstated, saying so makes the story more credible, not less. I will ask you directly about what didn't change."</p>
+  </div>
+
+  <div class="instr">
+    <div class="instr__k">Block 3 — the open elicitation, verbatim</div>
+    <p class="script">"Looking at the whole engagement — in your view, what was the most significant change that came out of it? Take your time."</p>
+  </div>
+  <p>Nothing may precede this question except blocks 1 and 2. No dimension, goal, or expected outcome is named to the client before they have answered it.</p>
+
+  <div class="instr">
+    <div class="instr__k">Block 5 — the two mandatory probes</div>
+    <p class="script"><strong>Example:</strong> "Give me a specific recent example of you doing that."</p>
+    <p class="script"><strong>External echo:</strong> "Did anyone notice — your team, your board, at home? What exactly did they say?"</p>
+  </div>
+  <p>A claim with neither an example nor an echo is published only as a Tier-1 self-report, or not at all.</p>
+
+  <div class="instr">
+    <div class="instr__k">Block 7 — negative elicitation, verbatim</div>
+    <p class="script">"What didn't change — what did you hope would move that didn't?"</p>
+    <p class="script">"If [coach] were listening, what would you tell them to do differently?"</p>
+    <p class="script">"Honest question: what might have improved anyway during that period, even without the coaching — new role, market, team changes, your own drive?"</p>
+  </div>
+  <p>The third answer becomes the story's <strong>other factors</strong> paragraph, published in every story. It is the client's own account of rival explanations, gathered before the writing begins rather than constructed afterwards.</p>
+
+  <div class="instr">
+    <div class="instr__k">Block 8 — the third-party confirmation request</div>
+    <p class="script">"You mentioned [claim]. Would you be comfortable with me sending [named person] a two-line email asking whether they observed that too? Two lines, one reply, nothing more."</p>
+  </div>
+  <p>The email sent is itself standardized, and explicitly invites a negative answer:</p>
+
+  <div class="email">
+    <div class="email__hd"><span>Subject</span><b>Two-line question about [client first name]</b></div>
+    <div class="email__bd">
+      <p>"Hello [name], I'm writing a short case study about [client]'s work with their executive coach — with [client]'s full consent, and they suggested you. One question, two lines is plenty: did you notice a change in [the specific claim] over [period]? Whatever you saw — including 'no change' — is useful. Thank you! — Sébastien Tomàs, The Syntoria Institute"</p>
+    </div>
+  </div>
+  <p>Replies are logged verbatim in the case file. "No change" answers are kept and honored: they downgrade the claim's tier, which is the mechanism working as designed.</p>
+</section>
+
+<section class="sec" id="s14">
+  <div class="sec__h"><span class="sec__n">14</span><h2>The retrospective ratings</h2><a class="sec__link" href="#s14" aria-label="Link to section 14">#</a></div>
+  <p>For each case we select 5–8 dimensions tied to the engagement's goals, drawn from a fixed menu:</p>
+  <ul class="chips">
+    <li>Decision-making under pressure</li>
+    <li>Delegation</li>
+    <li>Difficult conversations</li>
+    <li>Board and stakeholder relations</li>
+    <li>Team climate as the client experiences it</li>
+    <li>Clarity of priorities</li>
+    <li>Confidence in role</li>
+    <li>Stress and energy</li>
+    <li>Listening</li>
+    <li>Strategic versus operational balance</li>
+  </ul>
+  <p>The script is always the same, and the order is always <strong>NOW first, THEN second</strong>:</p>
+  <div class="instr">
+    <div class="instr__k">The then-test script, verbatim</div>
+    <p class="script">"Where are you now on [dimension], 1 to 10? … And looking back from where you sit today — where were you at [the reference point]?"</p>
+  </div>
+  <p>The block is announced to the client rather than slipped in:</p>
+  <div class="instr">
+    <div class="instr__k">Announcing the block, verbatim</div>
+    <p class="script">"I'm going to ask you a short series of structured questions now — same ones for every person I interview. Some will feel like survey questions; that's deliberate, it's what makes stories comparable and honest."</p>
+  </div>
+
+  <h3>The remainder of the measurement block, verbatim</h3>
+  <div class="instr">
+    <div class="instr__k">Goal attainment</div>
+    <p>Each engagement goal from the impact model is read back:</p>
+    <p class="script">"On this goal — would you say the work fell short of, met, or exceeded what you expected? … What tells you that?"</p>
+  </div>
+  <div class="instr">
+    <div class="instr__k">Working relationship — three items, rated 1 to 5</div>
+    <p class="script">"We agreed on what I needed to work on."</p>
+    <p class="script">"The way we worked together suited me."</p>
+    <p class="script">"I felt understood."</p>
+  </div>
+  <div class="instr">
+    <div class="instr__k">Global transition rating — one item, on a fixed seven-point scale</div>
+    <p class="script">"Compared to before the coaching, how would you rate the overall change in how you operate as a leader — much worse, worse, slightly worse, no change, slightly better, better, much better?"</p>
+    <div class="scale">
+      <div class="scale__row">
+        <div data-dn>Much<br>worse</div>
+        <div data-dn>Worse</div>
+        <div data-dn>Slightly<br>worse</div>
+        <div data-mid>No<br>change</div>
+        <div data-up="1">Slightly<br>better</div>
+        <div data-up="2">Better</div>
+        <div data-up="3">Much<br>better</div>
+      </div>
+      <div class="scale__cap"><span>1</span><span>7</span></div>
+    </div>
+  </div>
+  <p>These are retrospective self-ratings. They measure experienced change from the client's current perspective; they are not objective measurement, and they are always published with that label and never in a story's title.</p>
+</section>
+
+<section class="sec" id="s15">
+  <div class="sec__h"><span class="sec__n">15</span><h2>Consent — the two stages in full</h2><a class="sec__link" href="#s15" aria-label="Link to section 15">#</a></div>
+
+  <div class="stages">
+    <div class="stage">
+      <div class="stage__k">Stage A</div>
+      <h4>Before the interview — participation and recording</h4>
+      <ul>
+        <li><b>What this is:</b> a ~60-minute recorded conversation about the client's experience of working with [coach], conducted independently by the Institute — the coach is not present. Total time across the whole case is approximately an hour and a half, including reviewing the draft.</li>
+        <li><b>What it becomes:</b> a written case study that [coach] will use publicly (website, proposals, social). The Institute is engaged by [coach] under a fixed arrangement that does not depend on what the client says.</li>
+        <li><b>Separate consents, ticked individually:</b> record the conversation · transcribe it (the transcription service is named; a fully on-device tool is offered on request) · use the client's words to draft a story for their approval · archive recording and transcript in the case file.</li>
+        <li><b>Data:</b> recording and transcript seen only by the Institute, stored privately in the EU or under EU-approved safeguards. The recording is deleted once the final story is delivered; video excerpts approved at stage B are retained. The verbatim transcript is kept as the story's audit trail, and anonymized on request.</li>
+        <li><b>Rights:</b> participation is voluntary; the client may stop the interview, decline any question, or withdraw entirely at any time before publication, without explanation. After publication they may withdraw consent, and the story is removed from the Institute's properties and the coach's — with the honest caveat that copies already circulated by third parties may be beyond reach.</li>
+        <li><b>Nothing is published without stage B.</b></li>
+      </ul>
+    </div>
+    <div class="stage">
+      <div class="stage__k">Stage B</div>
+      <h4>On the final text — publication</h4>
+      <ul>
+        <li>The client confirms they have read the final version, dated, and approve every word.</li>
+        <li><b>Final visibility:</b> full name · role and sector only · fully anonymous. The latter two are confirmed only after an identifiability check conducted with the client.</li>
+        <li><b>Media rights:</b> text · optionally audio excerpts · optionally video excerpts.</li>
+        <li>Withdrawal contact and retention terms restated.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>Approval order — fixed and client-protective</h3>
+  <ol class="order">
+    <li data-actor="client"><span class="order__who">Client</span>The client reviews draft 1 and may correct or remove anything, without explanation. One consequence is fixed in advance: a story that loses its negative-elicitation answers or its other-factors paragraph at this step is declined under <a href="#s17">section 17</a>, never published without them.</li>
+    <li data-actor="client"><span class="order__who">Client</span>The client authorizes draft 2 being shared with the coach.</li>
+    <li data-actor="coach"><span class="order__who">Coach</span>The coach reviews, scoped to factual errors and confidentiality only. The coach cannot soften the friction, upgrade a claim's tier, or add outcomes. Every coach-requested change and its resolution is logged in the case file.</li>
+    <li data-actor="client"><span class="order__who">Client</span>The client validates last and signs stage-B consent on the final text.</li>
+  </ol>
+</section>
+
+<section class="sec" id="s16">
+  <div class="sec__h"><span class="sec__n">16</span><h2>Claim language — allowed and forbidden</h2><a class="sec__link" href="#s16" aria-label="Link to section 16">#</a></div>
+  <div class="ledger">
+    <table>
+      <thead><tr><th scope="col">Allowed</th><th scope="col">Forbidden</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>"The client reports…" / "She attributes X to the coaching"</td>
+          <td>"The coaching caused / delivered / produced X" (unqualified)</td>
+        </tr>
+        <tr>
+          <td>"Client-rated change, looking back: 3 → 8 (retrospective self-rating)"</td>
+          <td>Any rating presented as a measured outcome</td>
+        </tr>
+        <tr>
+          <td>"He says his board noticed…" (Tier 2)</td>
+          <td>Presenting a Tier-2 claim as an observed fact</td>
+        </tr>
+        <tr>
+          <td>"Confirmed by [document / named role]" — Tier 3 only, when the check was actually done</td>
+          <td>"Verified" on anything that did not pass a corroboration check</td>
+        </tr>
+        <tr>
+          <td>"The evidence is consistent with the coaching contributing to X, alongside [other factors]"</td>
+          <td>Any ROI multiple or percentage</td>
+        </tr>
+        <tr>
+          <td>"This case shows what this engagement produced for this client"</td>
+          <td>"Clients achieve…" / "results like these" / any typicality implication</td>
+        </tr>
+        <tr>
+          <td>The client's own words, cleaned of fillers and grammar, meaning untouched, approved by the client</td>
+          <td>Improved, merged, or composite quotes</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="limits">
+    <div class="limits__k">The limitations note — identical and verbatim in every published story</div>
+    <h4>What this story is and isn't.</h4>
+    <p>This is a single, retrospective case, deliberately selected as a success story — it shows what this coaching produced for this client, not what every client experiences. Outcomes are the client's own account, gathered after the engagement ended; research shows self-reported change tends to read stronger than observer-rated change. Ratings are retrospective self-ratings: they measure experienced change from the client's current perspective, not objective measurement. Where a claim was corroborated by a document or another person, we say so; where it wasn't, it remains the client's account. Other factors named in the story also contributed — we do not claim the coaching alone caused these results.</p>
+  </div>
+</section>
+
+<section class="sec" id="s17">
+  <div class="sec__h"><span class="sec__n">17</span><h2>When a story is declined</h2><a class="sec__link" href="#s17" aria-label="Link to section 17">#</a></div>
+  <p>A story is declined — not reshaped — when any of the following holds:</p>
+  <ol>
+    <li>The client will not be interviewed independently, or the coach insists on being present.</li>
+    <li>Headline outcomes cannot be corroborated and the client will not have them published as their own attributed account.</li>
+    <li>The coach demands edits that change meaning, soften the friction, or upgrade a claim.</li>
+    <li>Anonymity cannot survive the identifiability check even after generalizing details.</li>
+    <li>The account is internally inconsistent and remains so after a follow-up.</li>
+    <li>The client withdraws their negative-elicitation answers or the other-factors paragraph at review. Those elements are load-bearing; a story without them would no longer be a product of this method.</li>
+    <li>Anything of value turns out to be conditioned on a positive account — a hard stop, and everyone involved is told why.</li>
+  </ol>
+  <p>Declining is part of the product, not a failure of it. One row is logged per candidate story — proposed, interviewed, published, or declined with a reason category — and from a sufficient number of completed cases onward, the declined proportion is reported publicly.</p>
+</section>
+
+</div><!-- /col -->
+
+<!-- ======================================================== appendices === -->
+<div class="part" id="appendices">
+  <div class="part__n">Appendices</div>
+  <h2>References and version history</h2>
+</div>
+
+<div class="col">
+
+<section class="sec" id="appendix-a">
+  <div class="sec__h"><span class="sec__n">A</span><h2>References</h2><a class="sec__link" href="#appendix-a" aria-label="Link to Appendix A">#</a></div>
+  <ul class="refs">
+    <li>
+      <b>Success Case Method</b>
+      <span>Brinkerhoff, R. (2003), <em>The Success Case Method</em>; Brinkerhoff (2005), <em>Advances in Developing Human Resources</em> 7(1).</span>
+      <i>Deliberate best-case selection with bounded claims; corroborating evidence that would "stand up in court".</i>
+    </li>
+    <li>
+      <b>Contribution analysis</b>
+      <span>Mayne, J. (2008), <em>ILAC Brief</em> 16; Mayne (2012), <em>Evaluation</em> 18(3).</span>
+      <i>Plausible-contribution claims; other-factors assessment.</i>
+    </li>
+    <li>
+      <b>Qualitative trustworthiness</b>
+      <span>Lincoln, Y. &amp; Guba, E. (1985), <em>Naturalistic Inquiry</em>: member checking, audit trail, triangulation. Yin, R. (2018), <em>Case Study Research and Applications</em>: chain of evidence, rival explanations, case protocol.</span>
+    </li>
+    <li>
+      <b>Most Significant Change</b>
+      <span>Davies, R. &amp; Dart, J. (2005).</span>
+      <i>Open elicitation before probing; verification at source; transparent selection.</i>
+    </li>
+    <li>
+      <b>Retrospective pre-post (then-test)</b>
+      <span>Howard, G. et al. (1979), <em>Applied Psychological Measurement</em>; validity review Sibthorp et al. (2007); caveats Hill &amp; Betz (2005), <em>American Journal of Evaluation</em>.</span>
+    </li>
+    <li>
+      <b>Outcome taxonomies and calibration</b>
+      <span>Theeboom, T., Beersma, B. &amp; van Vianen, A. (2014); Jones, R., Woods, S. &amp; Guillaume, Y. (2016), <em>Journal of Occupational and Organizational Psychology</em>; de Haan, E. &amp; Nilsson, V. (2023), <em>Academy of Management Learning &amp; Education</em>; Smither, J. et al. (2003), <em>Personnel Psychology</em>.</span>
+    </li>
+    <li>
+      <b>Why no ROI figures</b>
+      <span>Grant, A. (2012), <em>Coaching: An International Journal</em> 5(2); De Meuse, K. et al. (2009).</span>
+    </li>
+    <li>
+      <b>Bias mitigations</b>
+      <span>Podsakoff, P. et al. (2003), common-method bias; Bergen, N. &amp; Labonté, R. (2020), social desirability; Corneille, O. &amp; Lush, P. (2023), demand characteristics.</span>
+    </li>
+    <li>
+      <b>Compliance</b>
+      <span>FTC Endorsement Guides (16 CFR Part 255, rev. 2023) and Reviews &amp; Testimonials Rule (16 CFR Part 465, 2024); ICC/ESOMAR International Code (2025), Articles 1, 4, 6, 9; GDPR Articles 6, 7, 17; EDPB pseudonymization guidance (2025); SPJ and AP anonymous-sourcing norms; the Trust Project indicators.</span>
+    </li>
+  </ul>
+</section>
+
+<section class="sec" id="appendix-b">
+  <div class="sec__h"><span class="sec__n">B</span><h2>Version history</h2><a class="sec__link" href="#appendix-b" aria-label="Link to Appendix B">#</a></div>
+  <div class="tw">
+    <table class="vh">
+      <thead><tr><th scope="col">Version</th><th scope="col">Date</th><th scope="col">Change</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="tnum">1.0</td>
+          <td class="tnum">30 July 2026</td>
+          <td>Method established.</td>
+        </tr>
+        <tr>
+          <td class="tnum">1.1</td>
+          <td class="tnum">12 August 2026</td>
+          <td>
+            <ul>
+              <li>Client interview reduced from 75 to 60 minutes, with block budgets re-set accordingly (<a href="#s13">section 13</a>); negative elicitation held at full length and protected from the trim.</li>
+              <li>Invitation re-specified (<a href="#s12">section 12</a>): the email is now the first time the study is raised with the client, with no informal pre-ask; its six beats are fixed and the version sent in each case is archived verbatim in the case file. The version-1.0 wording was drafted before any client had been approached and was superseded before use. A no-discussion rule added between invitation and interview. The client-facing page's fixed contents summarized.</li>
+              <li>Decline criterion added (<a href="#s15">sections 15</a> and <a href="#s17">17</a>): a story whose negative-elicitation answers or other-factors paragraph is withdrawn at review is declined, not published without them.</li>
+              <li>Residual bias risks stated (<a href="#s7">section 7</a>): the interviewer is not blind to the impact model; corroborators are client-nominated. The recording-deletion trade-off stated as deliberate (<a href="#s9">section 9</a>).</li>
+              <li>Case selection extended to ongoing engagements, with a named and dated anchor point required as the retrospective reference (<a href="#s3">sections 3</a> and <a href="#s5">5</a>).</li>
+              <li>Impact model now captured through a standardized written pre-interview form before the working session; coach predictions formally quarantined from the interviewer's materials (<a href="#s4-1">section 4.1</a>).</li>
+              <li>Measurement instruments reproduced in full (<a href="#s14">section 14</a>): goal-attainment question, working-relationship items, global transition scale.</li>
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+</div><!-- /col -->
+</div><!-- /doc -->
+
+<!-- ============================================================ footer === -->
+<footer class="foot">
+  <div class="foot__in">
+    <div class="foot__brand">
+      <svg viewBox="0 0 100 100" aria-hidden="true" fill="none">
+        <path d="M18.7 78 A42 42 0 1 1 81.3 78" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+        <path d="M28.6 77 A30 30 0 1 1 71.4 77" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+        <path d="M43.9 77 A19 19 0 1 1 56.1 77" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+        <circle cx="50" cy="74" r="19.5" fill="#fff"/>
+      </svg>
+      <span>The Syntoria Institute</span>
+    </div>
+    <p>Changes to this method are versioned and dated. Correspondence and challenges: <a href="mailto:sebastien@syntoria.co">sebastien@syntoria.co</a>. Every challenge receives a response; corrections are made visibly, with a dated note on the story.</p>
+    <div class="foot__meta">
+      <span>Method version 1.1</span>
+      <span>12 August 2026</span>
+      <span>Parts I and II, complete</span>
+    </div>
+  </div>
+</footer>
+
+</article>
+</div><!-- /wrap -->
+
+<button class="totop" id="totop" type="button" aria-label="Back to top">
+  <svg viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 12V2M2.5 6.5L7 2l4.5 4.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+<script>
+(function () {
+  var btn = document.getElementById('jumpBtn');
+  var jump = document.getElementById('jump');
+  var bar = document.getElementById('progress');
+  var top = document.getElementById('totop');
+
+  function closeJump() {
+    if (!jump) return;
+    jump.setAttribute('data-open', 'false');
+    if (btn) btn.setAttribute('aria-expanded', 'false');
+  }
+
+  if (btn && jump) {
+    btn.addEventListener('click', function () {
+      var open = jump.getAttribute('data-open') === 'true';
+      jump.setAttribute('data-open', open ? 'false' : 'true');
+      btn.setAttribute('aria-expanded', open ? 'false' : 'true');
+    });
+    jump.addEventListener('click', function (e) {
+      if (e.target.closest('a')) closeJump();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeJump();
+    });
+  }
+
+  if (top) {
+    top.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  var ticking = false;
+  function paint() {
+    ticking = false;
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    var y = window.scrollY || window.pageYOffset || 0;
+    if (bar) bar.style.width = (h > 0 ? Math.min(100, (y / h) * 100) : 0) + '%';
+    if (top) top.setAttribute('data-show', y > 900 ? 'true' : 'false');
+  }
+  function onScroll() {
+    if (!ticking) { ticking = true; window.requestAnimationFrame(paint); }
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll, { passive: true });
+  paint();
+})();
+</script>

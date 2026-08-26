@@ -4,6 +4,12 @@ Client-facing pages for The Syntoria Institute's case-study service.
 One directory per coach engagement, served by GitHub Pages.
 
 - `/josh/` — Beta 1, Josh Dietrich. The page his client reads before saying yes.
+- `/methodology/` — Case study methodology v1.1, Parts I and II. The page the
+  "Read the methodology →" CTA on every case-study one-pager points at. Unlike
+  the coach pages, this one is *meant* to be read by strangers: it is the public
+  edition of the review PDF sent for external methodological review. It still
+  carries `noindex` like every other page here — change that deliberately if you
+  ever want it findable in search.
 
 ## Before adding anything here
 
@@ -18,6 +24,7 @@ private. Never publish anything a stranger should not see.
 should not be hand-edited. Edit the source, rebuild, commit both:
 
     python3 build.py src/josh.html josh/index.html
+    python3 build.py src/methodology.html methodology/index.html
 
 The sources are Claude artifact bodies — no doctype, no `<head>`, no `<body>`,
 because claude.ai adds that wrapper at publish time. `build.py` adds the same
