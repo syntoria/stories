@@ -738,6 +738,18 @@ body{margin:0;background:#F4F6F8;color:#0B1B2B}
   color:#7A8B99;text-align:center;background:#FCFBF9}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .usage-note{background:#0E161E;color:#7E8B97}}
 :root[data-theme="dark"] .usage-note{background:#0E161E;color:#7E8B97}
+
+/* ---------- the six-dimension score grid (story, section 9) ---------- */
+.d-fs #the-six-dimensions{scroll-margin-top:62px}
+.d-fs .grid-score{list-style:none;margin:0 0 var(--sp-dock);padding:0;max-width:62ch}
+.d-fs .grid-score li{display:flex;align-items:baseline;gap:16px;
+  padding:7px 0;border-bottom:1px solid var(--hairline)}
+.d-fs .grid-score li:last-child{border-bottom:none}
+.d-fs .gs-d{flex:1;min-width:0}
+.d-fs .gs-v{flex:none;font-family:var(--record);font-size:var(--t-data);
+  font-variant-numeric:tabular-nums;white-space:nowrap;color:var(--slate)}
+.d-fs .gs-v b{font-weight:400;color:var(--ink)}
+.d-fs .gs-v i{font-style:normal;color:var(--faint);padding:0 7px}
 </style>
 
 <!-- ============ DOCUMENT ONE · the one-pager ============ -->
@@ -833,7 +845,7 @@ body{margin:0;background:#F4F6F8;color:#0B1B2B}
           </div>
 
           <div class="seam"><span>Before · the team, scored 1–10</span></div><!-- 4.1 -->
-          <div class="ev chartwrap"><a class="ev-a" href="#what-the-executives-saw" aria-label="Source: What the executives saw"></a><!-- 4 -->
+          <div class="ev chartwrap"><a class="ev-a" href="#the-six-dimensions" aria-label="Source: The six dimensions she scored"></a><!-- 4 -->
             <div class="rows"><!-- 4.4 · the six dimension labels -->
             <div class="row">
               <span class="lab" title="Her verbatim answer was the range “four or five” — printed as its midpoint; the range is the source.">Speaking up</span>
@@ -940,7 +952,7 @@ body{margin:0;background:#F4F6F8;color:#0B1B2B}
           </div>
 
           <div class="seam"><span>After · the same six dimensions</span></div><!-- 7.1 -->
-          <div class="ev chartwrap"><a class="ev-a" href="#what-changed" aria-label="Source: What changed"></a><!-- 7 -->
+          <div class="ev chartwrap"><a class="ev-a" href="#the-six-dimensions" aria-label="Source: The six dimensions she scored"></a><!-- 7 -->
             <div class="rows"><!-- 7.2 · the same six, same order -->
             <div class="row">
               <span class="lab">Speaking up</span>
@@ -1363,6 +1375,29 @@ body{margin:0;background:#F4F6F8;color:#0B1B2B}
 
   <div class="ev ev--sv">
     <p class="src src--bare">Stacy Critzer · client interview, 12 August 2026</p>
+  </div>
+
+  <p class="nar sv" id="the-six-dimensions">Near the end of the interview, Stacy Critzer scored the senior leadership team herself: six dimensions, before the program and at the time of the interview, on a scale of one to ten. Three of her six answers were ranges, and they are printed here as she gave them.</p>
+
+  <div class="ev ev--sv">
+    <ul class="grid-score">
+      <li><span class="gs-d">Speaking up in senior meetings</span><span class="gs-v">4&ndash;5<i>&rarr;</i><b>9</b></span></li>
+      <li><span class="gs-d">Collaboration between departments</span><span class="gs-v">5<i>&rarr;</i><b>10</b></span></li>
+      <li><span class="gs-d">Running their areas without escalating</span><span class="gs-v">4&ndash;5<i>&rarr;</i><b>8</b></span></li>
+      <li><span class="gs-d">Strategic, not just operational, contribution</span><span class="gs-v">4<i>&rarr;</i><b>7</b></span></li>
+      <li><span class="gs-d">Leadership presence with executives</span><span class="gs-v">5&ndash;6<i>&rarr;</i><b>8</b></span></li>
+      <li><span class="gs-d">Readiness of the bench below the executive team</span><span class="gs-v">4<i>&rarr;</i><b>8</b></span></li>
+    </ul>
+    <p class="src">Stacy Critzer &middot; client interview, 12 August 2026</p>
+  </div>
+
+  <p class="nar sv">One of the six carries her own qualification. Collaboration between departments is the largest movement in the grid and the only ten. She said the improvement would have come eventually, and that the coaching accelerated it.</p>
+
+  <div class="ev ev--sv">
+    <blockquote class="q">
+      <p class="speech">&ldquo;collaboration across the groups would have <b>eventually improved</b> but&hellip; with the coaching and it <b>accelerated</b> it&rdquo;</p>
+    </blockquote>
+    <p class="src">Stacy Critzer &middot; client interview, 12 August 2026</p>
   </div>
 </section>
 
