@@ -4,6 +4,11 @@ Client-facing pages for The Syntoria Institute's case-study service.
 One directory per coach engagement, served by GitHub Pages.
 
 - `/josh/` — Beta 1, Josh Dietrich. The page his client reads before saying yes.
+- `/unanet-jmgy5tam69/` — SYN-2026-001, the Unanet case study: the one-page
+  summary and the full sixteen-section story bound into one page. Sent to the
+  client, Unanet's CHRO, for her review. The path carries a random key because
+  this repository is public: the key stops the address being guessed, it does
+  not hide the folder from anyone browsing the repo.
 - `/methodology/` — Case study methodology v1.1, Parts I and II. The page the
   "Read the methodology →" CTA on every case-study one-pager points at. Unlike
   the coach pages, this one is *meant* to be read by strangers: it is the public
@@ -25,6 +30,7 @@ should not be hand-edited. Edit the source, rebuild, commit both:
 
     python3 build.py src/josh.html josh/index.html
     python3 build.py src/methodology.html methodology/index.html
+    python3 build.py src/unanet-jmgy5tam69.html unanet-jmgy5tam69/index.html
 
 The sources are Claude artifact bodies — no doctype, no `<head>`, no `<body>`,
 because claude.ai adds that wrapper at publish time. `build.py` adds the same
