@@ -9,7 +9,7 @@ One directory per coach engagement, served by GitHub Pages.
   client, Unanet's CHRO, for her review. The path carries a random key because
   this repository is public: the key stops the address being guessed, it does
   not hide the folder from anyone browsing the repo.
-- `/methodology/` — Case study methodology v1.1, Parts I and II. The page the
+- `/methodology/` — Case study methodology v1.2, Parts I and II. The page the
   "Read the methodology →" CTA on every case-study one-pager points at. Unlike
   the coach pages, this one is *meant* to be read by strangers: it is the public
   edition of the review PDF sent for external methodological review. It still
